@@ -121,6 +121,7 @@ body {
     font-size: 24px;
   }
   .container {
+    margin: 0 20%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
       "header header header"
