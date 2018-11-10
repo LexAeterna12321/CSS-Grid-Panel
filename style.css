@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700&subset=latin-ext");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  background-color: #2f3640;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  background-color: #7f8fa6;
+  box-shadow: 0 0 15px 6px #555;
+  border-radius: 10px;
+  display: grid;
+  padding-bottom: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "image    contact     video"
+    "image contact  video "
+    "document document document"
+    "notify calendar  calendar"
+    "setting setting setting";
+  text-align: center;
+}
+
+.panel {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: #dcdde1;
+  transition: 0.7s;
+  box-shadow: 1px 1px 6px 1px #353b48;
+  cursor: pointer;
+}
+
+.panel:hover {
+  color: #0097e6;
+  background-color: #353b48;
+}
+.header {
+  padding-block-end: 10px 0;
+  grid-area: header;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #dcdde1;
+  background-color: #0097e6;
+  border-radius: 10px 10px 0 0;
+}
+
+.image {
+  grid-area: image;
+  background-color: #e1b12c;
+}
+.video {
+  grid-area: video;
+  background-color: #00a8ff;
+}
+
+.document {
+  grid-area: document;
+  background-color: #e84118;
+}
+
+.contact {
+  grid-area: contact;
+  background-color: #fbc531;
+}
+.calendar {
+  grid-area: calendar;
+  background-color: #192a56;
+}
+
+.notify {
+  grid-area: notify;
+  background-color: #40739e;
+}
+
+.setting {
+  grid-area: setting;
+  background-color: #4cd137;
+}
+
+@media (min-width: 300px) {
+  html {
+    font-size: 18px;
+  }
+  .container {
+    grid-template-columns: 1fr 1fr;
+    margin: 5px;
+    grid-template-areas:
+      "header header"
+      "image  video"
+      " contact contact "
+      "document document"
+      "notify calendar"
+      "setting setting";
+  }
+  .panel {
+    margin: 5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 24px;
+  }
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "header header header"
+      "image contact video"
+      "image contact  video "
+      "document document document"
+      "notify calendar calendar"
+      "setting setting setting";
+  }
+}
